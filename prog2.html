@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Squares and Cubes</title>
+    <style>
+    html {background-color:#777777;}
+    table, td, th {
+        border: 4px solid navy;
+        width: 22%;
+        text-align: center;
+        background-color: #55FF3F;
+        border-collapse: collapse;
+    }
+    th {background-color: hotpink;}
+    table {margin:auto;}
+</style>
+</head>
+<body>
+<table>
+    <tr><td colspan='3' style='background-color: orange;font-weight:bold;'>Numbers from 0 to 10 with their squares and cubes</td></tr>
+    <tr>
+        <th>
+            Number
+        </th>
+        <th>
+            Square of Number
+        </th>
+        <th>
+            Cube of number
+        </th>
+    </tr>
+</table>
+</body>
+<script type="text/javascript">
+        var i;
+        var mt = document.getElementsByTagName("table")[0];
+        for(i=0;i<=10;i++){
+            var tr=document.createElement("tr");
+            var tdn=document.createElement("td");
+            var tds=document.createElement("td");
+            var tdc=document.createElement("td");
+            var noden=document.createTextNode(i.toString());
+            var nodes=document.createTextNode((i*i).toString());
+            var nodec=document.createTextNode((i*i*i).toString());
+            tdn.appendChild(noden);
+            tds.appendChild(nodes);
+            tdc.appendChild(nodec);
+            tr.appendChild(tdn);
+            tr.appendChild(tds);
+            tr.appendChild(tdc);
+            mt.appendChild(tr);
+        }
+    </script>
+</html>
